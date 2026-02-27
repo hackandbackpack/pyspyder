@@ -50,27 +50,27 @@ pip install -r requirements.txt
 
 ```bash
 # Spider a domain, download files, extract metadata
-python -m pyspyder -d targetdomain.com
+python pyspyder.py -d targetdomain.com
 ```
 
 ### File Types
 
 ```bash
 # Search for specific file types only
-python -m pyspyder -d targetdomain.com -f pdf,docx
+python pyspyder.py -d targetdomain.com -f pdf,docx
 
 # Just PDFs
-python -m pyspyder -d targetdomain.com -f pdf
+python pyspyder.py -d targetdomain.com -f pdf
 ```
 
 ### Output
 
 ```bash
 # Save files to a specific directory
-python -m pyspyder -d targetdomain.com -o ./loot/
+python pyspyder.py -d targetdomain.com -o ./loot/
 
 # Export all metadata to CSV
-python -m pyspyder -d targetdomain.com --csv results.csv
+python pyspyder.py -d targetdomain.com --csv results.csv
 ```
 
 ### Using a URL List
@@ -78,8 +78,8 @@ python -m pyspyder -d targetdomain.com --csv results.csv
 If you already have a list of file URLs (one per line), skip the spider phase entirely:
 
 ```bash
-python -m pyspyder --url-list urls.txt
-python -m pyspyder --url-list urls.txt --csv results.csv -o ./loot/
+python pyspyder.py --url-list urls.txt
+python pyspyder.py --url-list urls.txt --csv results.csv -o ./loot/
 ```
 
 Lines starting with `#` in the URL list are treated as comments and ignored.
@@ -88,22 +88,22 @@ Lines starting with `#` in the URL list are treated as comments and ignored.
 
 ```bash
 # Increase crawl depth (default: 2)
-python -m pyspyder -d targetdomain.com --depth 4
+python pyspyder.py -d targetdomain.com --depth 4
 
 # Increase max pages crawled (default: 500)
-python -m pyspyder -d targetdomain.com --max-pages 1000
+python pyspyder.py -d targetdomain.com --max-pages 1000
 
 # Slow down requests (default: 1 second delay)
-python -m pyspyder -d targetdomain.com --delay 2
+python pyspyder.py -d targetdomain.com --delay 2
 
 # Ignore robots.txt
-python -m pyspyder -d targetdomain.com --ignore-robots
+python pyspyder.py -d targetdomain.com --ignore-robots
 
 # Custom User-Agent
-python -m pyspyder -d targetdomain.com --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+python pyspyder.py -d targetdomain.com --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
 
 # Verbose output (shows debug-level detail)
-python -m pyspyder -d targetdomain.com -v
+python pyspyder.py -d targetdomain.com -v
 ```
 
 ## Example Output
